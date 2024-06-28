@@ -2,18 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int value = 7;
-        int[] values;
+        String[] words = new String[3];
 
-        values = new int[3]; //new keyword allocates the memory
+        words[0]="Hello";
+        words[1]="to";
+        words[2]="you";
 
-        System.out.println(values[0]); //prints 0 if the value is not defined in this position
-        for(int i =0; i<values.length; i++){ //iterates through the array
-            System.out.println(values[i]);
+        System.out.println(words[2]);
+
+        String[] fruits = {"apple", "cherries", "melons"};
+        for(String fruit: fruits){
+            System.out.println(fruit);
         }
-        int[] numbers ={5,6,7};
-        for (int i=0; i<numbers.length; i++){
-            System.out.println(numbers[i]);
-        }
+        int value = 0; //default initialization for ints
+        String text = null; //default initialization for strings
     }
 }

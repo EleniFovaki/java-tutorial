@@ -2,19 +2,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String[] words = new String[3];
+        int[][] grid = {
+                {1, 2, 3}, //0x0, 0x1, 0x2
+                {3, 2, 1}, //1x0, 1x1, 1x2
+                {5, 6, 7} //2x0, 2x1, 2x2
+        };
+        System.out.println(grid[1][1]); //row x column
 
-        words[0]="Hello";
-        words[1]="to";
-        words[2]="you";
-
-        System.out.println(words[2]);
-
-        String[] fruits = {"apple", "cherries", "melons"};
-        for(String fruit: fruits){
-            System.out.println(fruit);
+        String[][] texts = new String[2][3];
+        texts[0][1] = "hello there";
+        System.out.println(texts[0][1]);
+        for(int row=0; row<grid.length; row++){
+            for(int col=0; col< grid[row].length; col++){
+                System.out.print(grid[row][col] + "\t");
+            }
+            System.out.println();
         }
-        int value = 0; //default initialization for ints
-        String text = null; //default initialization for strings
     }
 }

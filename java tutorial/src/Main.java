@@ -1,43 +1,22 @@
-class Person {
-    //Classes can contain:
-    String name; //instance variables
-    int age; //instance variables
-
-    //Subroutines(methods)
-    void speak(){
-
-        System.out.println("My name is " + name + " and I am " + age + " years old.");
+class Robot{
+    public void speak(String text){
+        System.out.println(text);
     }
-    int calculateYearsToRetirement(){ //returns a value
-        int yearsLeft = 65 - age;
-        return yearsLeft;
+    public void jump(int height){
+        System.out.println("Jumping: " + height);
     }
-    String getName(){ //getters
-        return name;
-    }
-    int getAge(){
-        return age;
+    public void move(String direction, double distance){
+        System.out.println("Moving: " + distance + "in direction" + direction);
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Person person1 = new Person();
-        person1.name = "Joe Blogs";
-        person1.age = 31;
-        person1.speak();
-        int years = person1.calculateYearsToRetirement();
-        System.out.println("Years to retire: " + years);
-        int age = person1.getAge();
-        String name = person1.getName();
-
-        Person person2 = new Person();
-        person2.name = "Sarah Smith";
-        person2.age = 32;
-        person2.speak();
-        int age2 = person2.getAge();
-        String name2 = person2.getName();
-        System.out.println("Name is: " + name2);
-        System.out.println("Age is: " + age2);
+        Robot sam = new Robot();
+        sam.speak("Hi I am Sam");
+        sam.jump(500);
+        sam.move("west", 12.2);
+        String greeting = "Hello there";
+        sam.speak(greeting);
     }
 }

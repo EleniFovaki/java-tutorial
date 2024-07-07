@@ -1,22 +1,26 @@
-class Robot{
-    public void speak(String text){
-        System.out.println(text);
+class Frog{
+    private String name;
+    private int age;
+    public void setName(String name){ //setters method declaration
+        this.name = name;
     }
-    public void jump(int height){
-        System.out.println("Jumping: " + height);
+    public void setAge(int age){
+        this.age = age;
     }
-    public void move(String direction, double distance){
-        System.out.println("Moving: " + distance + "in direction" + direction);
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Robot sam = new Robot();
-        sam.speak("Hi I am Sam");
-        sam.jump(500);
-        sam.move("west", 12.2);
-        String greeting = "Hello there";
-        sam.speak(greeting);
+        Frog frog1 = new Frog();
+        frog1.setName("Bertie");
+
+        System.out.println(frog1.getName());
     }
+
 }

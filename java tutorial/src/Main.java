@@ -1,26 +1,21 @@
-class Frog{
+class Machine {
     private String name;
     private int age;
-    public void setName(String name){ //setters method declaration
+
+    public Machine() { //this is how you define a constructor
+        System.out.println("A machine is running"); //so this runs automatically everytime an instance of a class is created
+    }
+    public Machine(String name, int age) { //or a constructor can act as a getter and a setter method combined
         this.name = name;
-    }
-    public void setAge(int age){
         this.age = age;
-    }
-    public String getName(){
-        return name;
-    }
-    public int getAge(){
-        return age;
+        System.out.println("the machine is called: " + name + age);
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Frog frog1 = new Frog();
-        frog1.setName("Bertie");
 
-        System.out.println(frog1.getName());
+        Machine c3po = new Machine("c3po", 5); //the output depends on the arguments of the constructor
     }
 
 }

@@ -1,32 +1,33 @@
-class Thing {
-    public final static int LUCKY_NUMBER = 5;
-    public String name;
-    public static String description;
-
-    public void showName(){
-        System.out.println(description + ": " + name);
-    }
-    public static void showInfo(){
-        System.out.println(description);
-    }
-}
 
 public class Main {
     public static void main(String[] args) {
-        Thing.description = "I am a thing";
-        Thing.showInfo();
+        String info = "";
+        info += "My name is Bob.";
+        info += " ";
+        info += "I am a builder";
+        System.out.println(info);
 
-        Thing thing1 = new Thing();
-        Thing thing2 = new Thing();
+        StringBuilder sb = new StringBuilder(""); //or do this instead, it is more efficient
+        sb.append("My name is Sue");
+        sb.append("");
+        sb.append("I am a programmer");
+        System.out.println(sb.toString());
 
-        thing1.name = "Bob";
-        thing2.name = "Sue";
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append("My name is Roger")
+                .append(" ")
+                .append("I am a skydiver");
 
-        thing1.showName();
-        thing2.showName();
+        System.out.println(sb2.toString());
 
-        System.out.println(Math.PI);
-        System.out.println(Thing.LUCKY_NUMBER);
+        //Formatting
+        System.out.println("here is some text.\tThat was a tab\nThat was a new line");
+        System.out.printf("total cost %d", 5);
+
+        for(int i=0; i<5; i++){
+            System.out.printf("%2d: some text here\n", i);
+        }
+
     }
 
 }
